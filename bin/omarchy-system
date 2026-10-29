@@ -46,7 +46,7 @@ esac
 exit_session() {
   omarchy-osd -i "$action" -m "$message" -d 5000
   if [[ $action != "logout" ]]; then
-    omarchy-state clear re*-required
+    omarchy-state clear 're*-required'
   fi
 
   # Proceed as soon as apps exit, with a bound for unresponsive windows.
